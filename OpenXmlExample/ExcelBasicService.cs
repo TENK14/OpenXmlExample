@@ -11,9 +11,9 @@ namespace OpenXmlExample
 {
     public class ExcelBasicService
     {
-        public void CreateExcelDoc(MemoryStream memoryStream)
+        public void CreateExcel(Stream stream)
         {
-            using (SpreadsheetDocument document = SpreadsheetDocument.Create(memoryStream, SpreadsheetDocumentType.Workbook))
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
                 WorkbookPart workbookPart = document.AddWorkbookPart();
                 workbookPart.Workbook = new Workbook();
